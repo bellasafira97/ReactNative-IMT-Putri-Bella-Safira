@@ -11,15 +11,15 @@ class App extends Component{
     var imt = massa / Math.pow(tinggi, 2)
     var diagnosis = ''
       if (imt < 18.5){
-        diagnosis = 'Berat Badan Anda Kurang';
-      } else if (imt < 24.9){
+        diagnosis = 'Berat Badan Anda Kurang!!!';
+      } else if (imt >18.5 && imt < 24.9){
         diagnosis = 'Berat Badan Anda Ideal';
-      } else if (imt < 29.9){
+      } else if (imt >25 && imt < 29.9){
         diagnosis = 'Berat Badan Anda Berlebih';
-      } else if (imt < 39.9){
-        diagnosis = 'Berat Badan Anda Sangat Berlebih';
+      } else if (imt >30 && imt < 39.9){
+        diagnosis = 'Berat Badan Anda Sangat Berlebih!';
       } else{
-        diagnosis = 'Obesitas';
+        diagnosis = 'Obesitas!!!';
       } 
       return { imt, diagnosis }
   }
@@ -80,8 +80,8 @@ var wrapperContent = {
 var styleContent = {
   color: 'black',
   fontSize: 30,
-  fontWeight: 'bold'
-  
+  fontWeight: 'bold',
+  textAlign:'center'
 }
 
 export default App;
